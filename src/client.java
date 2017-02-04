@@ -6,7 +6,7 @@ public class client {
     private InetAddress address;
  
     private byte[] buf;
-    private byte[] conf;
+    private byte[] conf = new byte[65537];
  
     public client() throws SocketException, UnknownHostException {
         socket = new DatagramSocket();
@@ -19,7 +19,6 @@ public class client {
           = new DatagramPacket(buf, buf.length, address, 4444);
         socket.send(packet);
         
-        conf = "Message received: ".getBytes();
         packet = new DatagramPacket(conf, conf.length);
         socket.receive(packet);
         String received = new String(

@@ -14,15 +14,11 @@ public class test {
  
     
     public void whenCanSendAndReceivePacket_thenCorrect() throws IOException {
-        String echo = curr_client.sendEcho("hello server");
-        //assertEquals("hello server", echo);
         
-        //System.out.println(echo);
-        
-        echo = curr_client.sendEcho("server is working");
-        //assertFalse(echo.equals("hello server"));
-        
-        //System.out.println(echo);
+    	
+    	String echo = curr_client.sendEcho("THIS IS NOT VERY EXCITING");
+      
+        echo = curr_client.sendEcho(" CSE $$$$$$");
         
     }
  
